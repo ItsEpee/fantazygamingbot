@@ -7,7 +7,7 @@ client.on("ready", function() {
     console.log("Le bot est en ligne !");
 });
 
-client.login('process.env.TOKEN');
+client.login('NTcyODI0NzQwMzQ4MDM1MDcy.XMh7DQ.IHed3-LE66oHgiu9Ei1048oaIKc');
 
 client.on('message', message =>{
     if(message.content === "Bonjour FantazyGaming !"){
