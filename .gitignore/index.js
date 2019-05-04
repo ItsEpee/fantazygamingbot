@@ -43,10 +43,3 @@ client.on('guildMemberRemove', member =>{
 });
 
 
-
-client.on('message', message =>{
-    if(message.content === "A quoi tu sert ?"){
-        message.channel.sendMessage('Je sert a rien là :sob:');
-        console.log('répond à sert a quoi');
-    }
-});
