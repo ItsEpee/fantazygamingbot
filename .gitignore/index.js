@@ -3,11 +3,11 @@ const client = new Discord.Client();
 var prefix = "!FantazyGaming";
 
 client.on("ready", function() {
-    client.user.setActivity("BOT FantazyGaming ! En dev :) DEV PAR ITSEPEE");
+    client.user.setActivity("BOT FantazyGaming ! En dev :smiley: DEV PAR ITSEPEE");
     console.log("Le bot est en ligne !");
 });
 
-client.login(process.env.TOKEN);
+client.login('NTcyODI0NzQwMzQ4MDM1MDcy.XMh7DQ.IHed3-LE66oHgiu9Ei1048oaIKc');
 
 client.on('message', message =>{
     if(message.content === "Bonjour FantazyGaming !"){
@@ -27,7 +27,7 @@ client.on('message', message =>{
 
 client.on('guildMemberAdd', member =>{
     let embed = new Discord.RichEmbed()
-        .setDescription(':tada: **' + member.user.username + '** a rejoint le serveur discord de la chaîne  ' + member.guild.name)
+        .setDescription(':tada: ' + member.user.username + ' a rejoint le serveur discord de la chaîne  ' + member.guild.name)
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
     member.guild.channels.get('558715512758992908').send(embed)
     member.addRole('558716700262924308')
@@ -36,8 +36,17 @@ client.on('guildMemberAdd', member =>{
 
 client.on('guildMemberRemove', member =>{
     let embed = new Discord.RichEmbed()
-        .setDescription(':cry: **' + member.user.username + '** a quitté ' + member.guild.name)
+        .setDescription(':cry: ' + member.user.username + ' a quitté ' + member.guild.name)
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
     member.guild.channels.get('558715512758992908').send(embed)
 
+});
+
+
+
+client.on('message', message =>{
+    if(message.content === "A quoi tu sert ?"){
+        message.channel.sendMessage('Je sert a rien là :sob:');
+        console.log('répond à sert a quoi');
+    }
 });
