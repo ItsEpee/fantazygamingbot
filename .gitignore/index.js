@@ -7,7 +7,7 @@ client.on("ready", function() {
     console.log("Le bot est en ligne !");
 });
 
-client.login('process.env.TOKEN');
+client.login(process.env.TOKEN);
 
 client.on('message', message =>{
     if(message.content === "Bonjour FantazyGaming !"){
@@ -42,4 +42,9 @@ client.on('guildMemberRemove', member =>{
 
 });
 
-
+client.on('message', message =>{
+    if(message.content === "A quoi tu sert ?"){
+        message.channel.sendMessage('Je sert a rien là :sob:');
+        console.log('répond à sert a quoi');
+    }
+});
